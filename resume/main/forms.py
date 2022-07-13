@@ -1,6 +1,6 @@
 from django import forms
 
-from resume.main.models import ContactProfile
+from .models import ContactProfile
 
 
 class ContactForm(forms.ModelForm):

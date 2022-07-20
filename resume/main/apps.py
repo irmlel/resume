@@ -6,4 +6,4 @@ class MainConfig(AppConfig):
     name = 'main'
 
     def ready(self):
-        import resume.main.signals
+        import main.signals

@@ -314,13 +314,13 @@ a, .btn {
 }
 
 .progress.progressStyle {
-	height: 8px;
+  height: 8px;
 	padding: 1px;
-	background-color: var(--secondaryColor);
 	border-radius: 3px;
+  border-color: var(--secondaryColor)
 }
 .progressStyle .progress-bar {
-	background-color: #fff;
+	background-color: var(--secondaryColor);
 	border-radius: 3px;
 }
 .progressCol + .progressCol {

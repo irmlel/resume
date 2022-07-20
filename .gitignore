@@ -3,3 +3,8 @@ venv/
 .pytest_cache/
 *.pyc/
 .venv/
+.vs/
+.vscode/
+resume/main/__pycache__/
+resume/resume/__pycache__/
+

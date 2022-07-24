@@ -170,62 +170,30 @@ Start Content
             <a href="javascript:void(0)" class="simpleLink">View all</a>
           </div>
         </div>
+        {% for p in portfolio %}
+        {% if p.is_active %}
         <div class="portfolioCard">
           <div class="row g-4 align-items-center">
             <div class="col-md-auto">
+              {% if p.image %}
               <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
+                <a href="javascript:void(0)"><img src="{{sk.image.url}}" alt="..."></a>
               </div>
+              {% endif %}
             </div>
             <div class="col-md">
               <div class="portfolioContentCol">
-                <h4 class="lgTitle"><a href="javascript:void(0)">Portfolio option 1</a></h4>
+                <h4 class="lgTitle"><a href="javascript:void(0)">{{p.name}}</a></h4>
                 <ul class="portfolioOption">
-                  <li><span class="dateLbl">2021</span></li>
+                  <li><span class="dateLbl">{{p.date}}</span></li>
                 </ul>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                <p>{{p.description}}</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="portfolioCard">
-          <div class="row g-4 align-items-center">
-            <div class="col-md-auto">
-              <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="portfolioContentCol">
-                <h4 class="lgTitle"><a href="javascript:void(0)">Portfolio option 2</a></h4>
-                <ul class="portfolioOption">
-                  <li><span class="dateLbl">2021</span></li>
-                  <li>Django</li>
-                </ul>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolioCard">
-          <div class="row g-4 align-items-center">
-            <div class="col-md-auto">
-              <div class="portfolioImgCol">
-                <a href="javascript:void(0)"><img src="{% static 'images/work-img.jpg' %}" alt="..."></a>
-              </div>
-            </div>
-            <div class="col-md">
-              <div class="portfolioContentCol">
-                <h4 class="lgTitle"><a href="javascript:void(0)">Portfolio option 3</a></h4>
-                <ul class="portfolioOption">
-                  <li><span class="dateLbl">2021</span></li>
-                  <li>Marketplace</li>
-                </ul>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endif %}
+        {% endfor %}
       </div>
       <div class="testimonialCol">
         <h4 class="smText regular d-block">Testimonials</h4>
